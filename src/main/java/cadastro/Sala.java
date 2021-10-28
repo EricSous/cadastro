@@ -5,10 +5,12 @@ import java.util.ArrayList;
 public class Sala {
     ArrayList<Aluno> listaAlunos;
     ArrayList<Professor> listaProfessor;
+    ArrayList<Funcionarios> listaFuncionarios;
 
     public Sala() {
         this.listaAlunos = new ArrayList();
         this.listaProfessor = new ArrayList();
+        this.listaFuncionarios = new ArrayList();
 
     }
 
@@ -40,6 +42,18 @@ public class Sala {
         for (Professor novoProfessor : listaProfessor) {
             novoProfessor.listar();
         }
-
     }
+        void listaFuncionarios () {
+            System.out.println("\n Lista de Funcionarios:");
+            for (Funcionarios novoFuncionario : listaFuncionarios) {
+                novoFuncionario.listar();
+            }
+
+        }
+
+
+        public void insereFuncionarios (Funcionarios novoFuncionario){
+        listaFuncionarios.add(novoFuncionario);
+        }
+
 }
