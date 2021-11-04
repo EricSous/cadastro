@@ -7,29 +7,26 @@ public class Aluno {
     String nome, codigo, situacao = "reprovado";
     ArrayList<Float> notasAluno = new ArrayList();
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getcodigo() {
-        return codigo;
-    }
-
-    public void setcodigo(String codigo) {
-        this.codigo = codigo;
-    }
-
     public Aluno(String nome, String codigo) {
         setNome(nome);
         setcodigo(codigo);
     }
     public Aluno() {
-
     }
+
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+    public String getcodigo() {
+        return codigo;
+    }
+    public void setcodigo(String codigo) {
+        this.codigo = codigo;
+    }
+
     void listar(){
         System.out.println("Nome: " + this.nome);
         System.out.println("Codigo: " + this.codigo);

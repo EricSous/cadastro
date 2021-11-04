@@ -1,5 +1,9 @@
 package cadastro;
 
+import bd.Alunobd;
+import bd.Funcionariosbd;
+import bd.Professorbd;
+
 import java.util.Scanner;
 
 public class Main {
@@ -40,6 +44,8 @@ public class Main {
                     qntNotas = scan.nextInt();
 
                     novoAluno = new Aluno(nome, codigo);
+                    Alunobd alunobd = new Alunobd();
+                    alunobd.addAluno(novoAluno.nome);
 
                     for (int i = 0; i < qntNotas; i++) {
                         System.out.println("\nNota" + (i + 1));
@@ -60,13 +66,15 @@ public class Main {
                 case 4:
                     System.out.println("\nNome:");
                     nome = scan.nextLine();
-                    System.out.println("\nregistro do professor:");
+                    System.out.println("\nRegistro do professor:");
                     codigo = scan.nextLine();
                     System.out.println("\nMateria Responsavel:");
                     materia = scan.next();
 
                     novoProfessor = new Professor(nome, codigo, materia);
                     sala.insereProfessor(novoProfessor);
+                    Professorbd professor = new Professorbd();
+                    professor.addProfessor(novoProfessor.nome, novoProfessor.materia);
                     break;
 
                 case 5:
@@ -83,6 +91,8 @@ public class Main {
 
                     novoFuncionario = new Funcionarios(nome, registro, funcao);
                     sala.insereFuncionarios(novoFuncionario);
+                    Funcionariosbd funcionario = new Funcionariosbd();
+                    funcionario.addFuncionario(novoFuncionario.nome, novoFuncionario.funcao);
                     break;
 
                 case 7:
