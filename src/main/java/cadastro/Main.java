@@ -18,6 +18,7 @@ public class Main {
         Aluno novoAluno = new Aluno();
         Professor novoProfessor = new Professor();
         Funcionarios novoFuncionario = new Funcionarios();
+        ValidacaoDeDados validarAluno = new ValidacaoDeDados();
 
         do {
             System.out.println("\n===============        MENU        ===============\n");
@@ -43,7 +44,9 @@ public class Main {
                     System.out.println("Quantas notas você quer adicionar?");
                     qntNotas = scan.nextInt();
 
+
                     novoAluno = new Aluno(nome, codigo);
+
                     Alunobd alunobd = new Alunobd();
                     alunobd.addAluno(novoAluno.nome);
 

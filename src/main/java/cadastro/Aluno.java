@@ -6,6 +6,7 @@ public class Aluno {
     float total;
     String nome, codigo, situacao = "reprovado";
     ArrayList<Float> notasAluno = new ArrayList();
+    ValidacaoDeDados Aluno = new validarAluno();
 
     public Aluno(String nome, String codigo) {
         setNome(nome);
@@ -52,5 +53,8 @@ public class Aluno {
         }else {
             this.situacao = "Reprovado";
         }
+    }
+
+    private class validarAluno extends ValidacaoDeDados {
     }
 }
