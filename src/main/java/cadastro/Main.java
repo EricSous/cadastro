@@ -20,6 +20,7 @@ public class Main {
         Funcionarios novoFuncionario = new Funcionarios();
         ValidacaoDeDados validarAluno = new ValidacaoDeDados();
 
+
         do {
             System.out.println("\n===============        MENU        ===============\n");
             System.out.println("Escolha opção: \n");
@@ -39,16 +40,20 @@ public class Main {
                 case 1:
                     System.out.println("\nNome:");
                     nome = scan.nextLine();
+                    if (validarAluno.verificaNome(nome)){
+                }else {
+                    System.out.println("Não foi possivel cadastrar");
+                    break;
+                }
                     System.out.println("\nCodigo do estudante:");
                     codigo = scan.nextLine();
-                    System.out.println("Quantas notas você quer adicionar?");
+                    System.out.println("\nQuantas notas você quer adicionar?\n");
                     qntNotas = scan.nextInt();
-
 
                     novoAluno = new Aluno(nome, codigo);
 
                     Alunobd alunobd = new Alunobd();
-                    alunobd.addAluno(novoAluno.nome);
+//                    alunobd.addAluno(novoAluno.nome);
 
                     for (int i = 0; i < qntNotas; i++) {
                         System.out.println("\nNota" + (i + 1));

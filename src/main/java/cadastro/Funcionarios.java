@@ -33,4 +33,5 @@ public class Funcionarios {
         System.out.println("Registro: " + this.registro);
         System.out.println("Função:" + this.funcao);
     }
+
 }

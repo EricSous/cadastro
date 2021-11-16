@@ -6,11 +6,15 @@ public class Aluno {
     float total;
     String nome, codigo, situacao = "reprovado";
     ArrayList<Float> notasAluno = new ArrayList();
-    ValidacaoDeDados Aluno = new validarAluno();
+    ValidacaoDeDados validarAluno = new ValidacaoDeDados();
 
     public Aluno(String nome, String codigo) {
-        setNome(nome);
-        setcodigo(codigo);
+//        if (validarAluno.verificaNome(nome)){
+            setNome(nome);
+            setcodigo(codigo);
+//        }else {
+//            System.out.println("Não foi possivel cadastrar");
+//        }
     }
     public Aluno() {
     }
@@ -55,6 +59,4 @@ public class Aluno {
         }
     }
 
-    private class validarAluno extends ValidacaoDeDados {
-    }
 }

@@ -1,20 +1,27 @@
 package cadastro;
 
 public class ValidacaoDeDados {
-   Aluno aluno = new Aluno();
+        String nome;
 
 
-    public static boolean validarAluno(String aluno){
-        boolean valido = true;
+    public ValidacaoDeDados() {
+    }
 
-        if(aluno.length() < 25){
-            if(!aluno.substring(0).matches("[a,A-z,Z]*")){
-                valido = false;
+    public boolean verificaNome (String nome){
+        boolean valido = false;
+
+        if(nome.length() <= 25){
+            if(nome.substring(0).matches("[a,A-zZ]*")){
+                valido = true;
             }
         }else{
-            valido = false;
+            return valido;
         }
         return valido;
-
+    }public void setNome(String nome) {
+        this.nome = nome;
+    }public String getNome() {
+        return nome;
     }
+
 }
