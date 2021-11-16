@@ -6,30 +6,32 @@ public class Aluno {
     float total;
     String nome, codigo, situacao = "reprovado";
     ArrayList<Float> notasAluno = new ArrayList();
+    ValidacaoDeDados validarAluno = new ValidacaoDeDados();
+
+    public Aluno(String nome, String codigo) {
+//        if (validarAluno.verificaNome(nome)){
+            setNome(nome);
+            setcodigo(codigo);
+//        }else {
+//            System.out.println("Não foi possivel cadastrar");
+//        }
+    }
+    public Aluno() {
+    }
 
     public String getNome() {
         return nome;
     }
-
     public void setNome(String nome) {
         this.nome = nome;
     }
-
     public String getcodigo() {
         return codigo;
     }
-
     public void setcodigo(String codigo) {
         this.codigo = codigo;
     }
 
-    public Aluno(String nome, String codigo) {
-        setNome(nome);
-        setcodigo(codigo);
-    }
-    public Aluno() {
-
-    }
     void listar(){
         System.out.println("Nome: " + this.nome);
         System.out.println("Codigo: " + this.codigo);
@@ -56,4 +58,5 @@ public class Aluno {
             this.situacao = "Reprovado";
         }
     }
+
 }
