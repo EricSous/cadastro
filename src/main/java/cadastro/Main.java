@@ -47,6 +47,7 @@ public class Main {
                 }
                     System.out.println("\nCodigo do estudante:");
                     codigo = scan.nextLine();
+
                     System.out.println("\nQuantas notas você quer adicionar?\n");
                     qntNotas = scan.nextInt();
 

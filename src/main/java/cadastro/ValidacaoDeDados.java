@@ -1,27 +1,28 @@
 package cadastro;
 
 public class ValidacaoDeDados {
-        String nome;
+    String nome;
 
 
     public ValidacaoDeDados() {
     }
 
-    public boolean verificaNome (String nome){
+    public boolean verificaNome(String nome) {
         boolean valido = false;
-
-        if(nome.length() <= 25){
-            if(nome.substring(0).matches("[a,A-zZ]*")){
+        if (nome.length() <= 25) {
+            if (nome.substring(0).matches("[a,A-zZ]*")) {
                 valido = true;
             }
-        }else{
+        } else {
             return valido;
         }
         return valido;
-    }public void setNome(String nome) {
-        this.nome = nome;
-    }public String getNome() {
-        return nome;
     }
-
+    public boolean verificaCodigos(String codigo) {
+        boolean valida = false;
+        if (codigo.substring(0).matches("[0-9]*")) {
+            valida = true;
+        }
+        return valida;
+    }
 }
