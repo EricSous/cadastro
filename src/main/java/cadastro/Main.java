@@ -74,6 +74,11 @@ public class Main {
                 case 4:
                     System.out.println("\nNome:");
                     nome = scan.nextLine();
+                    if (validarAluno.verificaNome(nome)){
+                    }else {
+                        System.out.println("Não foi possivel cadastrar");
+                        break;
+                    }
                     System.out.println("\nRegistro do professor:");
                     codigo = scan.nextLine();
                     System.out.println("\nMateria Responsavel:");
@@ -92,6 +97,11 @@ public class Main {
                 case 6:
                     System.out.println("\nNome:");
                     nome = scan.nextLine();
+                    if (validarAluno.verificaNome(nome)){
+                    }else {
+                        System.out.println("Não foi possivel cadastrar");
+                        break;
+                    }
                     System.out.println("\nRegistro do Funcionario:");
                     registro = scan.nextLine();
                     System.out.println("\nFunção:");
