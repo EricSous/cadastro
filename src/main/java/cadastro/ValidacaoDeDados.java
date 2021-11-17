@@ -18,6 +18,7 @@ public class ValidacaoDeDados {
         }
         return valido;
     }
+
     public boolean verificaCodigos(String codigo) {
         boolean valida = false;
         if (codigo.substring(0).matches("[0-9]*")) {
