@@ -40,18 +40,17 @@ public class Main {
                 case 1:
                     System.out.println("\nNome:");
                     nome = scan.nextLine();
-                    if (validarAluno.verificaNome(nome)){
-                }else {
-                    System.out.println("Não foi possivel cadastrar");
-                    break;
-                }
+                    if (validarAluno.verificaNome(nome)) {
+                    } else {
+                        System.out.println("Não foi possivel cadastrar");
+                        break;
+                    }
                     System.out.println("\nCodigo do estudante:");
                     codigo = scan.nextLine();
 
                     System.out.println("\nQuantas notas você quer adicionar?\n");
                     qntNotas = scan.nextInt();
-
-                    novoAluno = new Aluno(nome, codigo);
+                    novoAluno = new Aluno(nome, codigo, qntNotas);
 
                     Alunobd alunobd = new Alunobd();
 //                    alunobd.addAluno(novoAluno.nome);
@@ -75,8 +74,8 @@ public class Main {
                 case 4:
                     System.out.println("\nNome:");
                     nome = scan.nextLine();
-                    if (validarAluno.verificaNome(nome)){
-                    }else {
+                    if (validarAluno.verificaNome(nome)) {
+                    } else {
                         System.out.println("Não foi possivel cadastrar");
                         break;
                     }
@@ -98,8 +97,8 @@ public class Main {
                 case 6:
                     System.out.println("\nNome:");
                     nome = scan.nextLine();
-                    if (validarAluno.verificaNome(nome)){
-                    }else {
+                    if (validarAluno.verificaNome(nome)) {
+                    } else {
                         System.out.println("Não foi possivel cadastrar");
                         break;
                     }
